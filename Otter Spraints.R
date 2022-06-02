@@ -9,3 +9,5 @@ git_default_branch_rename()
 git_default_branch_configure(name = "main")
 use_github()
 #Spraints are nice
+create_from_github("kingsleyshacklebolt/dragon_study")
+#Jellies are ugh
