@@ -1,5 +1,5 @@
-install.packages("palmerpenguins")
-palmerpenguins::penguins
+library(broom)
+library(palmerpenguins)
 penguins
 library(tidyverse)
 
@@ -11,3 +11,10 @@ ggplot(data = chinstrap, aes(x = bill_length_mm, y = bill_depth_mm))+
     x = "Bill length (mm)",
     y = "Bill depth (mm)",
     title = "Bill length and bill depth" )
+
+no_chin <- penguins |> 
+  drop_na() |> 
+  filter(species != "Chinstrap")
+
+ggplot(no_chin, aes(sex, flipper_length_mm, fill = sex)) +
+  geom_violin()
