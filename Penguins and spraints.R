@@ -17,4 +17,5 @@ no_chin <- penguins |>
   filter(species != "Chinstrap")
 
 ggplot(no_chin, aes(sex, flipper_length_mm, fill = sex)) +
-  geom_violin()
+  geom_violin() + 
+  ylab("Flipper length (mm)")
